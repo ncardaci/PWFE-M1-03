@@ -3,24 +3,23 @@
 	<head>
 		<meta charset="utf-8"><!--Charset define el código de caracteres que voy a utilizar para el armado de la pagina (utf-8 toma los caracteres especiales del español)-->
 		<title>EANT - Fullstack Essentials</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<style >
-			h1 {text-decoration: underline;
-				font-family: arial;
-				text-align: center;
-				color: violet;
-				background-color: greenyellow;
-				font-size: 46px;
-				}
-			a {background-color: yellow;
-				color: blue;
-				text-decoration: none;
-				font-family: time new romans;
-			   }
-			a:hover {background-color: red;}
+			a{
+				color: red;
+			}
 		</style>
 	</head>
 	<body>
 		<h1>Aprendiendo Git<br><br></h1>
 		<p>Git es un <strong>software</strong> que sirve como repositorio de Código creado por <a href="https://es.wikipedia.org/wiki/Linus_Torvalds" target="_blank" title="ver mas en la wikipedia">Linus Torvalds</a></p>
+		<a href="https://twitter.com/jesusbailarin?lang=es" target="_blank">
+		<img src="img/tenor.gif" alt="Imagen no disponible" width="110" >
+		</a>
+		<!-- Area para definir la parte dinámica de la página -->
+		<script src="js/main.js"></script>
+		<script>
+			document.querySelector("strong").onclick = saludar
+		</script>
 	</body>
 </html>
