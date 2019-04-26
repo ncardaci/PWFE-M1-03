@@ -15,10 +15,17 @@ a {
 /*Estilos Particulares*/
 header {
 	background-color: rgb(43, 42, 42);
+	overflow: hidden;
+	padding: 15px;
 }
 header h1 {
 	color: #fff;
 	margin: 0;
+	float: left;
+}
+header nav {
+	float: right;
+	padding: 10px;
 }
 header nav ul {
 	list-style: none;
@@ -32,3 +39,7 @@ header nav a {
 	text-align: center;
 	padding: 5px;
 		}
+header nav a:hover {
+	color: #333;
+	background-color: #fff;
+			}
