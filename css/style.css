@@ -149,3 +149,39 @@ footer h5 {
 	font-size: 16px;
 	line-height: 150%;
 }
+#menu-mobile {
+	display: none;
+}
+@media screen and (max-width: 576px){
+/* Inicio Media Query pantalla 800px*/
+	body {
+		color: red;
+	}
+	#menu{
+		display: none;
+		float: none;
+		clear: both;
+	}
+	#menu li{
+		display: block;
+		text-align: center;
+	}
+	#menu li a{
+		display: block;
+		padding: 8px;
+	}
+	#menu-mobile {
+		display: block;
+		float: right;
+		background-color: transparent;
+		border: none;
+		color: #fff;
+		line-height: 1;
+		size: 24px;
+		padding: 8px;
+	}
+	#menu-mobile:focus + #menu {
+		display: block;
+	}
+/* Fin Media Query pantalla 800px*/
+}
