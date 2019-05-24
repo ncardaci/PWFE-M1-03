@@ -1,0 +1,32 @@
+
+<h1>Kiosco "El Jeviscript"</h1>
+<button> Nuevo Producto</button>
+<section id="Productos">
+	
+</section>
+<script>
+	document.querySelector("button").onclick = cargarProducto
+
+	function cargarProducto(){
+		/**** Inicio de fn ****/
+		let nombre = prompt("Ingrese nombre del producto") //--string
+		let stock = prompt("Ingrese cantidad existente") //-- int
+		let precio = prompt("Ingrese el valor del Producto") //--float
+		let disponible = confirm("Esta disponible?") //--bool
+
+		/* Nudo */
+
+		if ( nombre == "" ) {
+			alert ("ERROR: El Nombre no puede quedar vacio")
+
+			return
+		}
+
+		let preciofinal = precio * 1.21
+		let msg = `<p>El producto <strong>${nombre}</strong> Tiene un precio Final de ARS ${preciofinal}</p>`
+
+		document.querySelector("#Productos").insertAdjacentHTML("afterend", msg)
+		/* document.write(`<p>El producto <strong>${nombre}</strong> Tiene un precio Final de ARS ${preciofinal}</p>`) */
+		/**** Fin de fn ****/
+	}
+</script>
