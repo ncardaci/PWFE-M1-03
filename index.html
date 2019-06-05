@@ -26,25 +26,25 @@
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ml-lg-auto text-center">
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-futbol"></i> Fútbol</a>
+            <a class="nav-link" href="futbol.html"><i class="fas fa-futbol"></i> Fútbol</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-basketball-ball"></i> NBA</a>
+            <a class="nav-link" href="nba.html"><i class="fas fa-basketball-ball"></i> NBA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-baseball-ball"></i> Tenis</a>
+            <a class="nav-link" href="tenis.html"><i class="fas fa-baseball-ball"></i> Tenis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Fórmula 1</a>
+            <a class="nav-link" href="formula_.html">Fórmula 1</a>
           </li>   
           <li class="nav-item">
-            <a class="nav-link" href="#">Boxeo</a>
+            <a class="nav-link" href="boxeo.html">Boxeo</a>
           </li>  
           <li class="nav-item">
-            <a class="nav-link" href="#">JJOO</a>
+            <a class="nav-link" href="jjoo.html">JJOO</a>
           </li>  
           <li class="nav-item">
-            <a class="nav-link" href="#">Moto GP</a>
+            <a class="nav-link" href="moto_gp.html">Moto GP</a>
           </li>                                                 
         </ul>
       </div>
@@ -155,12 +155,29 @@
         logo.title = "Esto lo puso JS"  
       }
       function validarOpcion(evento){
-
+        event.preventDefault()
         let clickeado = evento.target;
+        console.log
+        console.log(evento)
         let rta = confirm(`Esta seguro que desea ir a ${clickeado.innerText}?`)
         if ( rta ){
           alert("Ok buen viaje")
+          window.open(clickeado.href)
         }
+      }
+
+
+      function obtenerNoticias(){
+
+        let ajax = new XMLHttpRequest()
+        ajax.open("GET" , "noticias.json")
+        ajax.onload = function(){
+          if ( ajax.status == 200 ){ // <<-- Respuesta Exitosa!
+            console.log( ajax.response )
+
+          }
+        }
+        ajax.send()
       }
 
     </script>
